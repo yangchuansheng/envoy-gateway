@@ -91,6 +91,8 @@ func TestDeployment(t *testing.T) {
 					SecurityContext: &corev1.PodSecurityContext{
 						RunAsUser: pointer.Int64(1000),
 					},
+					HostNetwork: true,
+					DNSPolicy:   pointer.String("ClusterfirstWithHostNet"),
 				},
 				Container: &egv1a1.KubernetesContainerSpec{
 					Image: pointer.String("envoyproxy/envoy:v1.2.3"),

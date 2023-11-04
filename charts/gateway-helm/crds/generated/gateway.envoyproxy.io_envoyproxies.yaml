@@ -3024,6 +3024,14 @@ spec:
                                   should be appended to the pods. By default, no pod
                                   annotations are appended.
                                 type: object
+                              hostNetwork:
+                                description: HostNetwork, If this is set to true,
+                                  the pod will use host's network namespace.
+                                type: boolean
+                              dnsPolicy:
+                                description: dnsPolicy, If this is set to true,
+                                  the pod will use host's network namespace.
+                                type: string
                               labels:
                                 additionalProperties:
                                   type: string

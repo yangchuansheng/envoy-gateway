@@ -34,6 +34,7 @@ spec:
         prometheus.io/scrape: "true"
     spec:
       automountServiceAccountToken: false
+      hostNetwork: true
       containers:
         - args:
             - --service-cluster default
@@ -184,7 +185,7 @@ spec:
               readOnly: true
             - mountPath: /sds
               name: sds
-      dnsPolicy: ClusterFirst
+      dnsPolicy: ClusterFirstWithHostNet
       restartPolicy: Always
       schedulerName: default-scheduler
       serviceAccountName: envoy-default-37a8eec1
